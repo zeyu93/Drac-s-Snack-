@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Confirmed</title>
+<head>
+  <title>Confirmation Page</title>
 
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-    <!-- <script type="text/javascript" src=""></script> -->
-  </head>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+  <!--Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+
+  <!--CSS pages -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
+  <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
+  <link rel="stylesheet" href="/styles/footer.css" type="text/css"/>
+  <link rel="stylesheet" href="/styles/confirmed.css" type="text/css"/>
+
+  <!--Javascript -->
+  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    
+  <!-- Meta Information -->
+  <title>Bela Lugosi's Fed</title>
+</head>
 
   <body>
+  <% include ../views/partials/_header %>
     <h1>Thanks for your order </h1>
     <h2>Your Order will be ready soon </h2>
     <img src = '/home/z79liu/lighthouse/midterm_project_name/public/images/restaurant'>
+  <% include ../views/partials/_footer %>
   </body>
 </html>

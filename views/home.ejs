@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>home page</title>
+    <title>Home Page</title>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!--Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
+    <!--CSS pages -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/footer.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/home.css" type="text/css"/>
+
+    <!--Javascript -->
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-    <!-- <script type="text/javascript" src=""></script> -->
+      
+    <!-- Meta Information -->
+    <title>Bela Lugosi's Fed</title>
+
   </head>
 
   <body>
-    <h1>Welcome to our app</h1>
-<<<<<<< HEAD:views/home.ejs
-    <form method="GET" action="/menu">
-      <div class="form-group mb-2">
-        <button type="submit" class="btn btn-danger">Menu </button>
-      </div>
-    </form>
-    <form method="GET" action="/order">
-      <div class="form-group mb-2">
-        <button type="submit" class="btn btn-danger">Order Now </button>
-      </div>
-    </form>
-    
-=======
-    <a href = "">Menu</a>
-    <a href = "">Order Now</a>
-    <a href = "">Checkout</a>
-
->>>>>>> d152dcb2761e6c7efe345d7ac6e385f8dd1b2c0b:views/home.html
-    <div><img src = '/home/z79liu/lighthouse/midterm_project_name/public/images/restaurant'>
-    </div>
+    <% include ../views/partials/_header %>
+      <img src="https://i.pinimg.com/originals/8c/a5/87/8ca587d0f5503f3e0676ef8eae18c664.jpg">
+    <% include ../views/partials/_footer %>
   </body>
+
 </html>

@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Menu</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-  <!--Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-  
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-  <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+  <style>
 
-  <!--CSS pages -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
-  <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
-  <link rel="stylesheet" href="/styles/footer.css" type="text/css"/>
-  <link rel="stylesheet" href="/styles/menu.css" type="text/css"/>
+  body {
+    padding: 5rem;
+  }
 
-  <!--Javascript -->
-  <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
-    
+/*  .logo {
+    display: inline-block;
+  }
+  header {
+    margin-bottom: 90px;
+  }
+  li {
+    list-style:none;
+    display: inline-block;
+    }
+  ul {
+    float: right;
+  }*/
+
+  footer {
+    padding-top: 20px;
+    float: right;
+  }
+
+  </style>
+
   <!-- Meta Information -->
   <title>Bela Lugosi's Fed</title>
 
 </head>
 
 <body>
-<% include ../views/partials/_header %>
+
+<!--   <header>
+    <div class="logo">
+     <img src="http://placekitten.com/50/50">
+     BELA LUGOSI'S FED
+    </div>
+
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/menu">Menu</a></li>
+      <li><a href="/order">Order</a></li>
+    </ul>
+  </header> -->
+
   <main class="container">
 
     <div class="row">
+
       <div class = "col-sm-4">
         <img src="http://placekitten.com/200/300">
         <h1>Juicy Vampire Syrum</h1>
@@ -57,16 +82,10 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
         </p>
       </div>
+
     </div>
 
-    <div class="row">
-      <div class = "col-sm-4">
-        <img src="http://placekitten.com/200/300">
-        <h1>Juicy Vampire Syrum</h1>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        </p>
-      </div>
+        <div class="row">
 
       <div class = "col-sm-4">
         <img src="http://placekitten.com/200/300">
@@ -83,9 +102,26 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
         </p>
       </div>
+
+     <div class = "col-sm-4">
+        <img src="http://placekitten.com/200/300">
+        <h1>Juicy Vampire Syrum</h1>
+        <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        </p>
+      </div>
+
     </div>
+
+
+
+
   </main>
-  <% include ../views/partials/_footer %>
+
+  <footer>
+    SOCIAL MEDIA LINKS
+  </footer>
+
 
 </body>
 </html>

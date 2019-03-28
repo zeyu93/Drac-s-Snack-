@@ -1,13 +1,13 @@
 $(document).ready(function() {
-  // $.ajax({
-  //   method: "GET",
-  //   url: "/api/users"
-  // }).done((items) => {
-  //   for(item of items) {
-  //     $("<div>").text(item.name).appendTo($("body"));
-  //     $("<div>").text(item.Price).appendTo($("body"));
-  //   }
-  // });
+  $.ajax({
+    method: "GET",
+    url: "/api/users"
+  }).done((items) => {
+    for(item of items) {
+      $("<div>").text(item.name).appendTo($("body"));
+      $("<div>").text(item.Price).appendTo($("body"));
+    }
+  });
 
   $("form div").append('<i class="fas fa-plus-circle"></i>');
   $("form div").append('<i class="fas fa-minus-circle"></i>');
@@ -36,5 +36,3 @@ $(document).ready(function() {
   //   $(".quantity").on()
   // })
 });
-
-
