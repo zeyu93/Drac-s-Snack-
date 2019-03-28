@@ -35,6 +35,16 @@ app.use("/styles", sass({
 }));
 app.use(express.static("public"));
 
+
+var cookieSession = require('cookie-session');
+
+app.use(cookieSession({
+  name: 'session',
+  keys: ['aadsdasdasda'],
+  // Cookie Options
+  maxAge: 24 * 60 * 60 * 1000 // 24 hours
+}))
+
 // Mount all resource routes
 app.use("/api/users", usersRoutes(knex));
 
@@ -56,8 +66,14 @@ app.post("/register", (req,res)=> {
 })
 
 app.get("/order", (req, res) => {
+  req.session
   res.render("order");
 });
+
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
 ///
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
