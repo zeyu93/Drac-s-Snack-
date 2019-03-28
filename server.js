@@ -52,7 +52,7 @@ app.get("/register", (req, res) => {
 });
 
 app.post("/register", (req,res)=> {
-  res.redirect("/")
+  // res.redirect("/");
 })
 
 app.get("/order", (req, res) => {

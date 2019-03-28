@@ -18,7 +18,13 @@ module.exports = (knex) => {
   // saves a user to db...
   router.post("/register", (req, res) => {
     knex("users")
-      .insert({name: req.body.name, phone: req.body.phone});
+      .insert({name: req.body.name, phone: req.body.phone})
+      .then((results) => {
+        res.redirect("/");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   });
 
   return router;
