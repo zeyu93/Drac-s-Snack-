@@ -13,9 +13,16 @@
 
   <body>
     <h1>Welcome to our app</h1>
-    <a href = "">Menu</a>
-    <a href = "">Order Now</a>
-    <a href = "">Checkout</a>
+    <form method="GET" action="/menu">
+      <div class="form-group mb-2">
+        <button type="submit" class="btn btn-danger">Menu </button>
+      </div>
+    </form>
+    <form method="GET" action="/order">
+      <div class="form-group mb-2">
+        <button type="submit" class="btn btn-danger">Order Now </button>
+      </div>
+    </form>
     
     <div><img src = '/home/z79liu/lighthouse/midterm_project_name/public/images/restaurant'>
     </div>
