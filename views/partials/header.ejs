@@ -1,35 +1,14 @@
 <!-- views/partials/header.ejs -->
 
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-      <div class="navbar-header">
-          <h1><b>Home of the bloods</b> </h1>
-  
-      <% if (locals.user){ %>
-        <form method="POST" action="/logout">
-          <div class="form-group mb-2">
-            <label for="userId"><%= user.email %></label>
-            <button type="submit" class="btn btn-danger">Logout </button>
-          </div>
-        </form>
-       <% } else { %>
-        <form method="GET" action="/menu">
-          <div class="form-group mb-2">
-            <button type="submit" class="btn btn-danger">Register </button>
-          </div>
-        </form>
-        <form method="GET" action="/register">
-          <div class="form-group mb-2">
-            <button type="submit" class="btn btn-danger">Register </button>
-          </div>
-        </form>
-        <form method="GET" action="/login">
-          <div class="form-group mb-2">
-            <button type="submit" class="btn btn-danger">Login </button>
-          </div>
-        </form>
-       <% } %>
-       </div>
-  
-  </div>
-  </nav>
+  <header>
+    <div class="logo">
+     <img src="http://placekitten.com/50/50">
+     BELA LUGOSI'S FED
+    </div>
+
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/menu">Menu</a></li>
+      <li><a href="/order">Order</a></li>
+    </ul>
+  </header>
