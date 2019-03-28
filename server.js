@@ -51,6 +51,10 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
+app.post("/register", (req,res)=> {
+  res.redirect("/")
+})
+
 app.get("/order", (req, res) => {
   res.render("order");
 });
