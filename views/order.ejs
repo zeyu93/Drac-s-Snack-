@@ -5,6 +5,9 @@
     <meta name="description" content="<fill this in>">
     <meta name="author" content="<fill this in>">
 
+  <!-- Font Awesome for Plus and Minus Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <style>
       nav a {
         float: right;
@@ -34,6 +37,11 @@
         float: right;
       }
     </style>
+    <!-- External JS for Jquery Methods -->
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+
+    <!-- Application JS -->
+    <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
   <body>
     <nav>
@@ -43,20 +51,21 @@
       <a href="/order">Menu</a>
     </nav>
     <main>
-      <article>
-        <img src="http://placekitten.com/408/287" height=50px width=50px/>
-        <p class="quantity">3</p>
-        <img src="http://placekitten.com/408/287" height=50px width=50px/>
-        <p class="menu-item"> MENU ITEM HERE</p>
-      </article>
-      <article>
-        <img src="http://placekitten.com/408/287" height=50px width=50px/>
-        <p class="quantity">3</p>
-        <img src="http://placekitten.com/408/287" height=50px width=50px/>
-        <p class="menu-item"> MENU ITEM HERE</p>
-      </article>
-
-      <button href="/order">Confirm Order</button>
+      <form method="post" action="">
+        <div>
+          <input type="text" name="vampire food" id="french-hens" value="3">
+          <!-- <label for="name">French Hens</label> -->
+        </div>
+        <div>
+          <input type="text" name="burger" id="turtle-doves" value="2">
+          <!-- <label for="name">Turtle Doves</label> -->
+        </div>
+        <div>
+          <input type="text" name="eating" id="partridge" value="1">
+          <!-- <label for="name">Partridges</label> -->
+        </div>
+        <input type="submit" value="Submit" id="submit">
+      </form>
     </main>
     <footer>
       <h2> Contact Information </h2>
