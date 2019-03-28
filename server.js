@@ -47,6 +47,10 @@ app.get("/menu", (req, res) => {
   res.render("menu");
 });
 
+app.get("/register", (req, res) => {
+  res.render("register");
+});
+
 app.get("/order", (req, res) => {
   res.render("order");
 });
