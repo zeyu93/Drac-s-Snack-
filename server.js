@@ -51,7 +51,12 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
-app.post("/register", (req,res)=> {
+
+app.post("/order", (req,res)=> {
+  var templateVar = []
+  res.redirect()
+})
+app.post("/checkout", (req,res)=> {
   // res.redirect("/");
 })
 
