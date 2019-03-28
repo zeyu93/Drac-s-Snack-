@@ -1,13 +1,37 @@
-  .logo {
-    display: inline-block;
-  }
-  header {
-    margin-bottom: 90px;
-  }
-  li {
-    list-style:none;
-    display: inline-block;
-    }
-  ul {
-    float: right;
-  }
+header {
+  margin-bottom: 90px;
+}
+
+.title {
+  font-style: italic;
+}
+
+header .logo {
+  float: left;
+  padding-right: 5px;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+#nav-bar {
+  margin-top: -58px;
+  float: right
+}
+
+ul {
+  text-align: right;
+}
+
+li {
+  list-style:none;
+  display: inline;
+  color: white;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
