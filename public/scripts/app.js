@@ -9,8 +9,8 @@ $(document).ready(function() {
   //   }
   // });
 
-  $("form div").prepend('<i class="fas fa-minus-circle"></i>');
   $("form div").append('<i class="fas fa-plus-circle"></i>');
+  $("form div").append('<i class="fas fa-minus-circle"></i>');
 
   $(".fas fa-minus-circle").on("click", function() {
 
