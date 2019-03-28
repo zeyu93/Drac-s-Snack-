@@ -9,9 +9,27 @@
       nav a {
         float: right;
       }
+
       main {
-        text-align: center;
+        padding-top: 100px;
       }
+
+      main article {
+        padding-bottom: 100px;
+      }
+
+      main article .quantity {
+        float: left;
+      }
+
+      main article .menu-item {
+        float: left;
+      }
+
+      main article img {
+        float: left;
+      }
+
       footer h4 {
         float: right;
       }
@@ -25,24 +43,20 @@
       <a href="/order">Menu</a>
     </nav>
     <main>
-      <h2>Summary</h2>
-      <p>1 Dumpling</p>
-      <p>2 Inline</p>
-      <button href="/order">Edit Order</button>
-      <br>
-      <h2>Customer Information</h2>
-      <form>
-        First Name:
-        <input type="text" name="firstname">
-        <br>
-        Last Name:
-        <input type="text" name="lastname">
-        <br>
-        Phone Number:
-        <input type="text" name="lastname">
-      </form>
-      <br>
-      <button>Submit Order</button>
+      <article>
+        <img src="http://placekitten.com/408/287" height=50px width=50px/>
+        <p class="quantity">3</p>
+        <img src="http://placekitten.com/408/287" height=50px width=50px/>
+        <p class="menu-item"> MENU ITEM HERE</p>
+      </article>
+      <article>
+        <img src="http://placekitten.com/408/287" height=50px width=50px/>
+        <p class="quantity">3</p>
+        <img src="http://placekitten.com/408/287" height=50px width=50px/>
+        <p class="menu-item"> MENU ITEM HERE</p>
+      </article>
+
+      <button href="/order">Confirm Order</button>
     </main>
     <footer>
       <h2> Contact Information </h2>
