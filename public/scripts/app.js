@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   $.ajax({
     method: "GET",
     url: "/api/users"
@@ -30,7 +31,6 @@ $(document).ready(function() {
     }
     $button.parent().find("input").val(newVal);
   });
-
   // $(".add").on("click", function(event) {
   //   let input = 0
   //   $(".quantity").on()
