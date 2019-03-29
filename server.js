@@ -64,9 +64,9 @@ app.post("/order", (req, res) => {
   res.redirect("/checkout");
 });
 
-// app.get("/checkout", (req, res) => {
-//   res.render("checkout");
-// });
+app.get("/checkout", (req, res) => {
+  res.render("checkout");
+});
 ///
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);
