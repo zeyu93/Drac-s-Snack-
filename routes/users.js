@@ -27,6 +27,17 @@ module.exports = (knex) => {
       });
   });
 
+  router.post("/order", (req, res) => {
+    knex("orders")
+      .insert({name: req.body.name, phone: req.body.phone})
+      .then((results) => {
+        res.redirect("/checkout");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+
   return router;
 }
 //
