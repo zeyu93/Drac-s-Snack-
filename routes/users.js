@@ -17,9 +17,10 @@ module.exports = (knex) => {
 
   //
   router.get("/checkout", (req,res) => {
-    knex
+    knex("orders_items")
+    .join("items","orders_items.item_id", '=', 'items.id')
     .select("*")
-    .from("orders_items")
+    // .from("orders_items")
     .then((results) => {
       res.json(results);
     });

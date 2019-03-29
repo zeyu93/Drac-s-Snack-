@@ -67,6 +67,9 @@ app.get("/checkout", (req, res) => {
   res.render("checkout");
 });
 
+app.get("/confirmed", (req, res) => {
+  res.render("confirmed");
+});
 // app.get("/test", (req,rest) => {
 //   knex
 //   .select("*")
