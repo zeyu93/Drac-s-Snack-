@@ -1,12 +1,5 @@
 $(document).ready(function() {
 
-  let shoppingCart = {};
-
-    $("input").on("input", function(){
-      console.log("I see you!");
-    });
-
-
   // $.ajax({
   //   method: "GET",
   //   url: "/api/users"
