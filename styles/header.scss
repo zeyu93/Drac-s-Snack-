@@ -38,6 +38,18 @@ a {
   color: white;
 }
 
-hover:a {
-  font-weight: bold
+a:hover {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
 }
+
+header i {
+  margin-right: 0px;
+  padding: 5px 5px 5px 5px;
+}
+
+.line {
+  border-bottom: 2px solid white;
+}
+
