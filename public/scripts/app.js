@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+  let shoppingCart = {};
+
+    $("input").on("input", function(){
+      console.log("I see you!");
+    });
+
+
   // $.ajax({
   //   method: "GET",
   //   url: "/api/users"
@@ -12,24 +19,21 @@ $(document).ready(function() {
 
   $(".fas.fa-plus-circle").on("click", function() {
     var $button = $(this);
-    var oldValue = $button.parent().siblings().find("input").val();
-    var newVal = parseFloat(oldValue) + 1;
-    $button.parent().siblings().find("input").val(newVal);
+    var oldValue = parseInt($button.parent().siblings().find("span")[0].innerText);
+    var newVal = parseInt(oldValue) + 1;
+    $button.parent().siblings().find("span")[0].innerText = newVal;
   });
 
   $(".fas.fa-minus-circle").on("click", function() {
    // Don't allow decrementing below zero
     var $button = $(this);
-    var oldValue = $button.parent().siblings().find("input").val();
+    var oldValue = parseInt($button.parent().siblings().find("span")[0].innerText);
     if (oldValue > 0) {
-      var newVal = parseFloat(oldValue) - 1;
+      var newVal = parseInt(oldValue) - 1;
     } else {
       var newVal = 0;
     }
-    $button.parent().siblings().find("input").val(newVal);
+    $button.parent().siblings().find("span")[0].innerText = newVal;
   });
-  // $(".add").on("click", function(event) {
-  //   let input = 0
-  //   $(".quantity").on()
-  // })
+
 });
