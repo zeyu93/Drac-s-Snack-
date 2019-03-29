@@ -59,7 +59,6 @@ app.get("/order", (req, res) => {
   res.render("order");
 });
 
-
 app.post("/order", (req, res) => {
   res.redirect("/checkout");
 });
