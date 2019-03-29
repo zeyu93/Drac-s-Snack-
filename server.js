@@ -67,6 +67,7 @@ app.get("/checkout", (req, res) => {
   res.render("checkout");
 });
 
+
 app.get("/confirmed", (req, res) => {
   res.render("confirmed");
 });
