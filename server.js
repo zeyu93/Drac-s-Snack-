@@ -9,6 +9,17 @@ const bodyParser  = require("body-parser");
 const sass        = require("node-sass-middleware");
 const app         = express();
 
+const cookieSession = require('cookie-session')
+
+// app.use(cookieSession({
+//   name: 'session',
+//   keys: [''],
+//     // Cookie Options
+//   maxAge: 24 * 60 * 60 * 1000 // 24 hours
+// }))
+
+
+
 const knexConfig  = require("./knexfile");
 const knex        = require("knex")(knexConfig[ENV]);
 const morgan      = require('morgan');
@@ -40,7 +51,9 @@ app.use("/api/users", usersRoutes(knex));
 
 // Home page
 app.get("/", (req, res) => {
+  
   res.render("home");
+
 });
 
 app.get("/menu", (req, res) => {
@@ -51,9 +64,6 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
-app.post("/register", (req,res)=> {
-  // res.redirect("/");
-})
 
 app.get("/order", (req, res) => {
   res.render("order");
