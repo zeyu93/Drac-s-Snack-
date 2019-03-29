@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.table('users', function (table) {
+  return knex.schema.table('items', function (table) {
     table.varchar('description');
   });
 };
