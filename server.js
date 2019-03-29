@@ -66,6 +66,15 @@ app.post("/order", (req, res) => {
 app.get("/checkout", (req, res) => {
   res.render("checkout");
 });
+
+// app.get("/test", (req,rest) => {
+//   knex
+//   .select("*")
+//   .from("orders_tables")
+//   .then((results) => {
+//     res.json(results);
+//   });
+// })
 ///
 app.listen(PORT, () => {
   console.log("Example app listening on port " + PORT);

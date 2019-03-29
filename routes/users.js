@@ -15,6 +15,16 @@ module.exports = (knex) => {
     });
   });
 
+  //
+  router.get("/checkout", (req,res) => {
+    knex
+    .select("*")
+    .from("orders_items")
+    .then((results) => {
+      res.json(results);
+    });
+  });
+
   // saves a user to db...
   router.post("/register", (req, res) => {
     knex("users")
@@ -26,6 +36,7 @@ module.exports = (knex) => {
         console.log(err);
       });
   });
+
 
   return router;
 }
