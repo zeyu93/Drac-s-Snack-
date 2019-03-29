@@ -1,38 +1,59 @@
 $(document).ready(function() {
-  $.ajax({
-    method: "GET",
-    url: "/api/users"
-  }).done((items) => {
-    for(item of items) {
-      $("<div>").text(item.name).appendTo($("body"));
-      $("<div>").text(item.Price).appendTo($("body"));
-    }
-  });
 
-  $("form div").append('<i class="fas fa-minus-circle"></i>');
-   $("form div").append('<i class="fas fa-plus-circle"></i>');
+  let shoppingCart = {};
+
+  // $.ajax({
+  //   method: "GET",
+  //   url: "/api/users/checkout"
+  // }).done((items) => {
+  //   for(item of items) {
+  //     $("<div>").text(item).appendTo($("body"));
+  //   }
+  // });
 
   $(".fas.fa-plus-circle").on("click", function() {
+    // increments quantity of item
     var $button = $(this);
-    var oldValue = $button.parent().find("input").val();
-    var newVal = parseFloat(oldValue) + 1;
-    $button.parent().find("input").val(newVal);
+    var oldValue = parseInt($button.parent().siblings().find("span")[0].innerText);
+    var newVal = parseInt(oldValue) + 1;
+    $button.parent().siblings().find("span")[0].innerText = newVal;
+
+    // adds item to shopping cart
+    var pathToID = $button.parent().siblings()[0].getAttribute("id");
+    let item = pathToID;
+
+    shoppingCart[item] = ({
+      item_id: pathToID,
+      item_quantity: newVal
+    })
+
+    console.log(shoppingCart);
+
   });
 
   $(".fas.fa-minus-circle").on("click", function() {
    // Don't allow decrementing below zero
     var $button = $(this);
-    var oldValue = $button.parent().find("input").val();
+    var oldValue = parseInt($button.parent().siblings().find("span")[0].innerText);
     if (oldValue > 0) {
-      var newVal = parseFloat(oldValue) - 1;
+      var newVal = parseInt(oldValue) - 1;
     } else {
       var newVal = 0;
     }
-    $button.parent().find("input").val(newVal);
+    $button.parent().siblings().find("span")[0].innerText = newVal;
+
+    // remove item from shopping cart
+    var pathToID = $button.parent().siblings()[0].getAttribute("id");
+    let item = pathToID;
+
+    if (shoppingCart[item].item_quantity === 1) {
+      delete shoppingCart[item];
+    } else {
+      shoppingCart[item].item_quantity = newVal;
+    }
+
+     console.log(shoppingCart);
+
   });
 
-  // $(".add").on("click", function(event) {
-  //   let input = 0
-  //   $(".quantity").on()
-  // })
 });
