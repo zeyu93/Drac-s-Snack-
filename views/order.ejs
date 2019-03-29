@@ -36,7 +36,7 @@
 
   <body>
   <% include ../views/partials/_header %>
-    <article>
+    <!-- <article>
       <form method="post" action="/order">
         <div>
           <label for="name">French Hens</label>
@@ -54,8 +54,65 @@
 
         <input type="submit" value="Checkout" id="submit">
       </form>
-    </article>
-
+    </article> -->
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Minus</th>
+        <th>Plus</th>
+      </tr>
+      <tr>
+        <td>Slayer Soup</td>
+        <td>$9.99</td>
+        <td class="quantity">
+          <input id='asdasd' type="text" name="quantity" maxlength="3" size="2" value ="0">
+        </td>
+        <td class="minus"><i class="fas fa-minus-circle"></i></td>
+        <td class="plus"><i class="fas fa-plus-circle"></i></td>
+      </tr><tr>
+        <td>Depression</td>
+        <td>$9.99</td>
+        <td>
+          <input type="text" name="quantity" maxlength="3" size="2" value ="0">
+        </td>
+        <td class="minus"><i class="fas fa-minus-circle"></i></td>
+        <td class="plus"><i class="fas fa-plus-circle"></i></td>
+      </tr><tr>
+        <td>Bark of Tree</td>
+        <td>$9.99</td>
+        <td>
+          <input type="text" name="quantity" maxlength="3" size="2" value ="0">
+        </td>
+        <td class="minus"><i class="fas fa-minus-circle"></i></td>
+        <td class="plus"><i class="fas fa-plus-circle"></i></td>
+      </tr><tr>
+        <td>Shrek's Ear Wax</td>
+        <td>$9.99</td>
+        <td>
+          <input type="text" name="quantity" maxlength="3" size="2" value ="0">
+        </td>
+        <td class="minus"><i class="fas fa-minus-circle"></i></td>
+        <td class="plus"><i class="fas fa-plus-circle"></i></td>
+      </tr><tr>
+        <td>Tail of Lizard</td>
+        <td>$9.99</td>
+        <td>
+          <input type="text" name="quantity" maxlength="3" size="2" value ="0">
+        </td>
+        <td class="minus"><i class="fas fa-minus-circle"></i></td>
+        <td class="plus"><i class="fas fa-plus-circle"></i></td>
+      </tr><tr>
+        <td>Leg of Man</td>
+        <td>$9.99</td>
+        <td>
+          <input type="text" name="quantity" maxlength="3" size="2" value ="0">
+        </td>
+        <td class="minus"><i class="fas fa-minus-circle"></i></td>
+        <td class="plus"><i class="fas fa-plus-circle"></i></td>
+      </tr>
+    </table>
     <% include ../views/partials/_footer %>
   </body>
 
