@@ -4,11 +4,10 @@ $(document).ready(function() {
 
   // $.ajax({
   //   method: "GET",
-  //   url: "/api/users"
+  //   url: "/api/users/checkout"
   // }).done((items) => {
   //   for(item of items) {
-  //     $("<div>").text(item.name).appendTo($("body"));
-  //     $("<div>").text(item.Price).appendTo($("body"));
+  //     $("<div>").text(item).appendTo($("body"));
   //   }
   // });
 

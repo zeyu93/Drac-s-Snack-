@@ -15,6 +15,17 @@ module.exports = (knex) => {
     });
   });
 
+  //
+  router.get("/checkout", (req,res) => {
+    knex("orders_items")
+    .join("items","orders_items.item_id", '=', 'items.id')
+    .select("*")
+    // .from("orders_items")
+    .then((results) => {
+      res.json(results);
+    });
+  });
+
   // saves a user to db...
   router.post("/register", (req, res) => {
     knex("users")
@@ -26,6 +37,7 @@ module.exports = (knex) => {
         console.log(err);
       });
   });
+
 
   return router;
 }
