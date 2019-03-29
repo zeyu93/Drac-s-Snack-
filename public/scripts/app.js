@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  let shoppingCart = {};
+
   // $.ajax({
   //   method: "GET",
   //   url: "/api/users"
@@ -11,10 +13,23 @@ $(document).ready(function() {
   // });
 
   $(".fas.fa-plus-circle").on("click", function() {
+    // increments quantity of item
     var $button = $(this);
     var oldValue = parseInt($button.parent().siblings().find("span")[0].innerText);
     var newVal = parseInt(oldValue) + 1;
     $button.parent().siblings().find("span")[0].innerText = newVal;
+
+    // adds item to shopping cart
+    var pathToID = $button.parent().siblings()[0].getAttribute("id");
+    let item = pathToID;
+
+    shoppingCart[item] = ({
+      item_id: pathToID,
+      item_quantity: newVal
+    })
+
+    console.log(shoppingCart);
+
   });
 
   $(".fas.fa-minus-circle").on("click", function() {
@@ -27,6 +42,19 @@ $(document).ready(function() {
       var newVal = 0;
     }
     $button.parent().siblings().find("span")[0].innerText = newVal;
+
+    // remove item from shopping cart
+    var pathToID = $button.parent().siblings()[0].getAttribute("id");
+    let item = pathToID;
+
+    if (shoppingCart[item].item_quantity === 1) {
+      delete shoppingCart[item];
+    } else {
+      shoppingCart[item].item_quantity = newVal;
+    }
+
+     console.log(shoppingCart);
+
   });
 
 });
