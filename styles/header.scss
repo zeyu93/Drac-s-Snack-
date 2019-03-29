@@ -1,5 +1,5 @@
 header {
-  margin-bottom: 90px;
+  margin: 4% 4% 13% 4%;
 }
 
 .title {
@@ -13,6 +13,7 @@ header .logo {
 
 h1 {
   font-size: 1.5rem;
+  font-family: 'Nosifer', cursive;
 }
 
 #nav-bar {
@@ -35,4 +36,8 @@ li {
 a {
   text-decoration: none;
   color: white;
+}
+
+hover:a {
+  font-weight: bold
 }
