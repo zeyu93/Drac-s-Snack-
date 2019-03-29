@@ -26,6 +26,16 @@ module.exports = (knex) => {
     });
   });
 
+  router.post("/order", (req,res) => {
+    knex.raw('INSERT INTO orders (created_at) values (CURRENT_TIMESTAMP) RETURNING id')
+    .then((results) => {
+      console.log(results.rows)
+      res.redirect("/checkout")
+    });
+  });
+
+
+
   // saves a user to db...
   router.post("/register", (req, res) => {
     knex("users")
@@ -37,8 +47,6 @@ module.exports = (knex) => {
         console.log(err);
       });
   });
-
-
   return router;
 }
 //

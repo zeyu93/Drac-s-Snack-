@@ -46,10 +46,12 @@ $(document).ready(function() {
     var pathToID = $button.parent().siblings()[0].getAttribute("id");
     let item = pathToID;
 
-    if (shoppingCart[item].item_quantity === 1) {
-      delete shoppingCart[item];
-    } else {
-      shoppingCart[item].item_quantity = newVal;
+    if (shoppingCart[item] !== undefined ) {
+      if (shoppingCart[item].item_quantity === 1) {
+        delete shoppingCart[item];
+      } else {
+        shoppingCart[item].item_quantity = newVal;
+      }
     }
 
      console.log(shoppingCart);

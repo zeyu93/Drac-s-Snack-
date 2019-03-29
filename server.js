@@ -59,13 +59,14 @@ app.get("/order", (req, res) => {
   res.render("order");
 });
 
-app.post("/order", (req, res) => {
-  res.redirect("/checkout");
-});
+// app.post("/order", (req, res) => {
+//   res.redirect("/checkout");
+// });
 
 app.get("/checkout", (req, res) => {
   res.render("checkout");
 });
+
 
 app.get("/confirmed", (req, res) => {
   res.render("confirmed");
