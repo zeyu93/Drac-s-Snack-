@@ -16,6 +16,11 @@ article img {
 }
 
 body {
-  margin-top: 10%;
-  background-color: black;
-}
+        margin-top: 10%;
+        background: url('/images/bloody-background.jpg')no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+    }
