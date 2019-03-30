@@ -6,7 +6,7 @@ $(document).ready(function() {
     url: "/api/users/checkout"
   }).done((items) => {
     for(item of items) {
-      $("<li>").text(item).appendTo($(".summary"));
+      $("<li>").text(item.name).appendTo($(".summary"));
     }
   });
 });

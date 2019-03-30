@@ -32,6 +32,7 @@ $(document).ready(function() {
   });
 
   $(".fas.fa-minus-circle").on("click", function() {
+    
    // Don't allow decrementing below zero
     var $button = $(this);
     var oldValue = parseInt($button.parent().siblings().find("span")[0].innerText);
@@ -56,6 +57,10 @@ $(document).ready(function() {
 
      console.log(shoppingCart);
 
+
   });
-  
+  $("#checkout").on("click", function() {
+    localStorage.setItem('cart', shoppingCart);
+    console.log(localStorage);
+  })
 });
