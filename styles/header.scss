@@ -1,4 +1,38 @@
-header {
+.red {
+  color: #4a0808;
+}
+
+.bg-light {
+  background-image: url("/images/red-background.jpg");
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  margin: auto;
+  padding-right: 5%;
+}
+
+.bloody {
+  font-family: 'Nosifer', cursive;
+}
+
+.small-title {
+  font-size: 100%;
+}
+
+.big-title {
+  font-size: 150%;
+}
+
+header nav a img {
+  padding-bottom: 0.5em;
+}
+
+/*header {
   margin: 4% 4% 10% 4%;
 }
 
@@ -65,3 +99,4 @@ header i {
   border-bottom: 2px solid white;
 }
 
+*/
