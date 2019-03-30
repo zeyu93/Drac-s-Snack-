@@ -21,7 +21,7 @@ const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
 const app = express();
 
-app.post('/sms', (req, res) => {
+app.get('/confirmed', (req, res) => {
   const twiml = new MessagingResponse();
 
   twiml.message('The Robots are coming! Head for the hills!');
@@ -53,6 +53,8 @@ client.messages
   })
 
   //to send a msg back we need a backend admin page
+
+
   // fills out a form to indicate how long 
   // the order will take to fill
   //two fields: 
