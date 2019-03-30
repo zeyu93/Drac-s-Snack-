@@ -2,8 +2,32 @@
   color: #4a0808;
 }
 
+nav a {
+  text-decoration: none;
+  color: black !important;
+}
+
+nav a:hover {
+  font-weight: bold;
+  color: white !important;
+  text-decoration: none;
+}
+
 .bg-light {
-  background-image: url("/images/red-background.jpg");
+  background-color: #b00b0d !important;
+  border-bottom: 3px solid black;
+}
+
+.navbar-nav {
+  -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav-link {
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0em 2em;
 }
 
 .logo {
