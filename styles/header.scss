@@ -14,6 +14,7 @@
 h1 {
   margin: auto;
   padding-right: 5%;
+  color: #000000;
 }
 
 .bloody {
@@ -25,12 +26,20 @@ h1 {
 }
 
 .big-title {
-  font-size: 150%;
+  font-size: 160%;
 }
 
 header nav a img {
   padding-bottom: 0.5em;
 }
+
+/*.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+}
+
+.navbar li { color: #000 }*/
 
 /*header {
   margin: 4% 4% 10% 4%;
