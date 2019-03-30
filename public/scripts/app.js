@@ -20,11 +20,15 @@ $(document).ready(function() {
 
     // adds item to shopping cart
     var pathToID = $button.parent().siblings()[0].getAttribute("id");
+    var pathToName = $button.parent().siblings()[0].innerText;
+    var pathToPrice = $button.parent().siblings()[1].innerText;
     let item = pathToID;
 
     shoppingCart[item] = ({
       item_id: pathToID,
-      item_quantity: newVal
+      name: pathToName,
+      item_quantity: newVal,
+      price: pathToPrice
     })
 
     console.log(shoppingCart);
@@ -32,6 +36,7 @@ $(document).ready(function() {
   });
 
   $(".fas.fa-minus-circle").on("click", function() {
+
    // Don't allow decrementing below zero
     var $button = $(this);
     var oldValue = parseInt($button.parent().siblings().find("span")[0].innerText);
@@ -56,6 +61,11 @@ $(document).ready(function() {
 
      console.log(shoppingCart);
 
+
   });
 
+  $("#checkout").on("click", function() {
+    localStorage.setItem('cart', shoppingCart);
+    console.log(localStorage);
+  })
 });
