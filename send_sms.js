@@ -10,13 +10,13 @@ require('dotenv').config();
 // const authToken = '6f4862ebdff859830d9ff1db6d1ed382';
 
 // Esther's Credentials
-const accountSid = process.env.TWILIO_SID;
-const authToken = process.env.TWILIO_AUTH;
+const express = require('express');
 
 // require the Twilio module and create a REST client
 const client = require('twilio')(accountSid, authToken);
+const accountSid = process.env.TWILIO_SID;
+const authToken = process.env.TWILIO_AUTH;
 const http = require('http');
-const express = require('express');
 const MessagingResponse = require('twilio').twiml.MessagingResponse;
 
 const app = express();

@@ -10,7 +10,10 @@ const sass        = require("node-sass-middleware");
 const app         = express();
 const http        = require('http');
 const twilio      = require('twilio');
-
+const MessagingResponse = require('twilio').twiml.MessagingResponse;
+const accountSid = 'ACb821873d0587d85c246d76ace12fadfa';
+const authToken = '95275827719a1f480ac9ad58e6425fbe';
+const client = require('twilio')(accountSid, authToken);
 
 const cookieSession = require('cookie-session')
 
@@ -95,13 +98,44 @@ app.get("/confirmed", (req, res) => {
 ///
 
 //TWILIO
-app.post('/sms', function(req, res) {
-  var twilio = require('twilio');
-  var twiml = new twilio.TwimlResponse();
-  twiml.message('The Robots are coming! Head for the hills!');
-  res.writeHead(200, {'Content-Type': 'text/xml'});
-  res.end(twiml.toString());
-});
+// app.post('/sms', function(req, res) {
+//   var twilio = require('twilio');
+//   var twiml = new twilio.TwimlResponse();
+//   twiml.message('The Robots are coming! Head for the hills!');
+//   res.writeHead(200, {'Content-Type': 'text/xml'});
+//   res.end(twiml.toString());
+// });
+
+function send_sms(params){
+  console.log("this is to send order to restaurant phone")
+  client.messages
+  .create({
+    body: 'Your order will be ready in!',
+   //  Esther's number
+     from: '+14388069885',
+     to: '+15146220593'
+    // Zeyu's number
+   //  from: '+16474924614',
+   //  to: '+14168097087'
+  })
+ .then(message => console.log(message.sid))
+ .catch(err => {
+   console.log(err);
+ })
+}
+
+app.get("/admin", (req,res)=>{
+  res.render("admin")
+})
+
+app.post("/admin", (req,res) => {
+    let templateVars = {duration: req.body.duration, phone: req.body.tel};
+    console.log(templateVars)
+    send_sms(req.body.tel)
+    res.render("admin")
+  });
+
+
 
 http.createServer(app).listen(1337, function () {
   console.log("Express server listening on port 1337");

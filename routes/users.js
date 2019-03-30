@@ -6,7 +6,6 @@ const express = require('express');
 const router  = express.Router();
 const MessagingResponse = require('twilio').twiml.MessagingResponse;
 const http = require('http');
-
 const client = require('twilio')(accountSid, authToken);
 
 module.exports = (knex) => {
@@ -59,7 +58,7 @@ module.exports = (knex) => {
      console.log(err);
    })
   }
-  
+
   router.post("/checkout", (req,res) => {
     console.log("body of request: ", req.body)
     knex("users")
@@ -67,7 +66,7 @@ module.exports = (knex) => {
     .then((results) => {
       let templateVars = {name: req.body.name, phone: req.body.phone_no};
       console.log(templateVars)
-      send_sms(req.body)
+      send_sms(req.body.phone_no)
       res.redirect("/confirmed")
     });
   });
