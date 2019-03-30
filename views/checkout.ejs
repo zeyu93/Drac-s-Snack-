@@ -11,14 +11,14 @@
 
   <!--Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-  
+
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
   <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Jolly+Lodger|Roboto" rel="stylesheet">
-  
+
   <!--CSS pages -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
   <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
@@ -35,21 +35,27 @@
 
   <body>
   <% include ../views/partials/_header %>
-    <header>
-      <nav>
-        <span>Menu</span>
-        <span>Checkout</span>
-      </nav>
-    </header>
     <div>
       <h2>Order Summary</h2>
-      <ul class = 'summary'>
-        <li></li>
-        <li>Rump of Man x1</li>
-        <li>Blood-soaked Crab Cakes (6) x1</li>
-        <li>English Breakfast Tea x3</li>
-        <li>Peach Cheesecake x1</li>
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody id="body">
+          <!-- orders to go here-->
+        </tbody>
+        <tfoot>
+          <tr">
+            <td>Total</td>
+            <td></td>
+            <td id="total"></td>
+          </tr>
+        </tfoot>
+      </table>
       <button type="submit">Edit</button>
     </div>
     <h2>User Info</h2>

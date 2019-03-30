@@ -15,17 +15,16 @@ module.exports = (knex) => {
     });
   });
 
-  //
-  router.get("/checkout", (req,res) => {
-    knex("orders_items")
-    .join("items","orders_items.item_id", '=', 'items.id')
-    .select("*")
-    // .from("orders_items")
-    .then((results) => {
-      console.log(results)
-      res.json(results);
-    });
-  });
+  // router.get("/checkout", (req,res) => {
+  //   knex("orders_items")
+  //   .join("items","orders_items.item_id", '=', 'items.id')
+  //   .select("*")
+  //   // .from("orders_items")
+  //   .then((results) => {
+  //     console.log(results)
+  //     res.json(results);
+  //   });
+  // });
 
   router.post("/order", (req,res) => {
     knex.raw('INSERT INTO orders (created_at) values (CURRENT_TIMESTAMP) RETURNING id')
