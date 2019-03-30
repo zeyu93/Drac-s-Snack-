@@ -65,7 +65,7 @@ $(document).ready(function() {
   });
 
   $("#checkout").on("click", function() {
-    localStorage.setItem('cart', shoppingCart);
+    localStorage.setItem('cart', JSON.stringify(shoppingCart));
     console.log(localStorage);
   })
 });
