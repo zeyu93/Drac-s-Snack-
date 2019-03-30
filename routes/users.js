@@ -34,27 +34,33 @@ module.exports = (knex) => {
     });
   });
 
-  // router.post("/confirmed", (req,res) => {
-  //   knex.raw('INSERT INTO orders (created_at) values (CURRENT_TIMESTAMP) RETURNING id')
-  //   .then((results) => {
-  //     console.log(results.rows)
-  //     res.redirect("/confirmed")
-  //   });
-  // });
+
+  // ('INSERT INTO orders_items (item_id, item_quantity, created_at) values (CURRENT_TIMESTAMP) RETURNING id')
+
+  router.post("/checkout", (req,res) => {
+    knex("users")
+    .insert({name: req.body.name, phone: req.body.phone_no})
+    .then((results) => {
+      let templateVars = {name: req.body.name, phone: req.body.phone_no};
+      console.log(templateVars)
+      res.redirect("/confirmed")
+    });
+  });
+
 
 
 
   // saves a user to db...
-  router.post("/register", (req, res) => {
-    knex("users")
-      .insert({name: req.body.name, phone: req.body.phone})
-      .then((results) => {
-        res.redirect("/");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  });
+  // router.post("/register", (req, res) => {
+  //   knex("users")
+  //     .insert({name: req.body.name, phone: req.body.phone})
+  //     .then((results) => {
+  //       res.redirect("/");
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // });
   return router;
 }
 //
