@@ -34,6 +34,14 @@ module.exports = (knex) => {
     });
   });
 
+  // router.post("/confirmed", (req,res) => {
+  //   knex.raw('INSERT INTO orders (created_at) values (CURRENT_TIMESTAMP) RETURNING id')
+  //   .then((results) => {
+  //     console.log(results.rows)
+  //     res.redirect("/confirmed")
+  //   });
+  // });
+
 
 
   // saves a user to db...
