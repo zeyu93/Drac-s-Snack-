@@ -36,13 +36,18 @@ module.exports = (knex) => {
 
 
   // ('INSERT INTO orders_items (item_id, item_quantity, created_at) values (CURRENT_TIMESTAMP) RETURNING id')
-
+  function send_sms(params){
+    console.log("this is to send order to restaurant phone")
+  }
+  
   router.post("/checkout", (req,res) => {
+    console.log("body of request: ", req.body)
     knex("users")
     .insert({name: req.body.name, phone: req.body.phone_no})
     .then((results) => {
       let templateVars = {name: req.body.name, phone: req.body.phone_no};
       console.log(templateVars)
+      send_sms(req.body)
       res.redirect("/confirmed")
     });
   });
