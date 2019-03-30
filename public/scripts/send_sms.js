@@ -1,8 +1,18 @@
 // Download the helper library from https://www.twilio.com/docs/node/install
 // Your Account Sid and Auth Token from twilio.com/console
 // DANGER! This is insecure. See http://twil.io/secure
-const accountSid = 'AC6fcfd1e98597d109e3cf0fa3bd99c85d';
-const authToken = '6f4862ebdff859830d9ff1db6d1ed382';
+
+// Twilio Credentials
+
+//Zeyu's Credentials
+// const accountSid = 'AC6fcfd1e98597d109e3cf0fa3bd99c85d';
+// const authToken = '6f4862ebdff859830d9ff1db6d1ed382';
+
+// Esther's Credentials
+const accountSid = 'ACb821873d0587d85c246d76ace12fadfa';
+const authToken = '95275827719a1f480ac9ad58e6425fbe';
+
+// require the Twilio module and create a REST client
 const client = require('twilio')(accountSid, authToken);
 const http = require('http');
 const express = require('express');
