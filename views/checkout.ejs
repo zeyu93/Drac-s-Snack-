@@ -33,9 +33,9 @@
 
   <body>
   <% include ../views/partials/_header %>
-    <div>
+    <div class="summary">
       <h2>Order Summary</h2>
-      <table>
+      <table class="table table-borderless table-dark">
         <thead>
           <tr>
             <th>Name</th>
@@ -48,29 +48,35 @@
         </tbody>
         <tfoot>
           <tr">
-            <td>Total</td>
+            <td><strong>Total</strong></td>
             <td></td>
             <td id="total"></td>
           </tr>
         </tfoot>
       </table>
-      <button type="submit">Edit</button>
+      <button type="submit" class="btn btn-dark">Edit</button>
     </div>
-    <h2>User Info</h2>
 
-    <form action="/api/users/checkout" method="POST">
-      <label for="Name">Name</label>
-      <input type="text" name="name" />
-      <label for="Phone No.">Phone No.</label>
-      <input type="text" name="phone_no" />
-      <label for="confirm">Confirm</label>
-      <input type="Submit" name="confirm"/>
-    </form>
+    <div class="info">
+      <h2>User Info</h2>
+      <form action="/api/users/checkout" method="POST">
+        <div class="form-group">
+          <label for="Name">Name</label>
+          <input type="text" name="name" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label for="Phone No.">Phone No.</label>
+          <input type="text" name="phone_no" class="form-control"/>
+        </div>
+        <div>
+          <input type="Submit" name="confirm" value="Confirm" class="form-control btn-dark"/>
+        </div>
+      </form>
+    </div>
 
-  <% include ../views/partials/_footer %>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <% include ../views/partials/_footer %>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
   </body>
 </html>

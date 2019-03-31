@@ -11,3 +11,28 @@ body {
 .image {
     opacity: 0.8
 }
+
+.summary {
+  margin-left:auto;
+  margin-right:auto;
+  max-width: 70vw;
+}
+
+.table-dark {
+  background-color: rgba(0,0,0,0.6);
+  color: #ffffff;
+}
+
+table > tfoot {
+  border-top: 1px solid white;
+}
+
+.info {
+  margin-top: 2rem;
+  margin-left:auto;
+  margin-right:auto;
+  max-width: 20vw;
+  padding: 2rem;
+  background-color: rgba(0,0,0,0.6);
+  color: #ffffff;
+}
