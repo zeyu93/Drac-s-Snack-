@@ -42,10 +42,9 @@ module.exports = (knex) => {
 
   // ('INSERT INTO orders_items (item_id, item_quantity, created_at) values (CURRENT_TIMESTAMP) RETURNING id')
   function send_sms(params){
-    console.log("this is to send order to restaurant phone")
     client.messages
     .create({
-      body: 'Your just received an order from a customer!',
+      body: 'You just received an order from a customer!',
      //  Esther's number
        from: '+14388069885',
        to: '+15146220593'

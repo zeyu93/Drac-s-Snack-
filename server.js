@@ -57,7 +57,7 @@ app.use("/api/users", usersRoutes(knex));
 
 // Home page
 app.get("/", (req, res) => {
-  
+
   res.render("home");
 
 });
@@ -106,12 +106,12 @@ app.get("/confirmed", (req, res) => {
 //   res.end(twiml.toString());
 // });
 
-function send_sms(params){
+function send_sms(params, duration){
   console.log("this is to send order to restaurant phone")
   client.messages
   .create({
-    body: 'Your order will be ready in!',
-   //  Esther's number
+    body: `Your order will be sent in ${duration} minutes! Sit tight creature of eternal darkness.`,
+   //  Esther's number. We can't make this work with a user phone number in the form because Twilio trial accounts only accept verified numbers
      from: '+14388069885',
      to: '+15146220593'
     // Zeyu's number
@@ -131,7 +131,7 @@ app.get("/admin", (req,res)=>{
 app.post("/admin", (req,res) => {
     let templateVars = {duration: req.body.duration, phone: req.body.tel};
     console.log(templateVars)
-    send_sms(req.body.tel)
+    send_sms(req.body.tel, req.body.duration)
     res.render("admin")
   });
 
