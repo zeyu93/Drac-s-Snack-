@@ -52,12 +52,5 @@ client.messages
     console.log(err);
   })
 
-  //to send a msg back we need a backend admin page
+  
 
-
-  // fills out a form to indicate how long 
-  // the order will take to fill
-  //two fields: 
-  //customer phone number
-  //description: duraton of time
-  //update a database "the order has been placed" 

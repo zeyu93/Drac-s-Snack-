@@ -106,11 +106,11 @@ app.get("/confirmed", (req, res) => {
 //   res.end(twiml.toString());
 // });
 
-function send_sms(params){
+function send_sms(params, duration){
   console.log("this is to send order to restaurant phone")
   client.messages
   .create({
-    body: 'Your order will be ready in!',
+    body: `Your order will be sent in ${duration} minutes! Sit tight creature of eternal darkness.`,
    //  Esther's number
      from: '+14388069885',
      to: '+15146220593'
@@ -131,7 +131,7 @@ app.get("/admin", (req,res)=>{
 app.post("/admin", (req,res) => {
     let templateVars = {duration: req.body.duration, phone: req.body.tel};
     console.log(templateVars)
-    send_sms(req.body.tel)
+    send_sms(req.body.tel, req.body.duration)
     res.render("admin")
   });
 
