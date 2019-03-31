@@ -1,3 +1,9 @@
+.flexcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
 figure {
     margin:0;
 }
@@ -10,20 +16,18 @@ p {
   color: #fbd8c3;
 }
 
-figure img {
+.menus {
+    height: 23vw;
+    width: 23vw;
+
+}
+
+.menus img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .image {
     opacity: 0.8
 }
-
-body {
-        margin-top: 10%;
-        background: url('/images/bloody-background.jpg')no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-
-    }

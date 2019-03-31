@@ -1,19 +1,11 @@
-body {
-        margin-top: 10%;
-        background: url('/images/bloody-background.jpg')no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-
-    }
 
 .carousel-inner > .carousel-item > img {
                 padding-top: 5%;
                 max-height: 70vh;
                 max-width: 50vw;
                 padding-left: 20%;
-                }
+}
+
 h1.welcome {
   font-family: 'Jolly Lodger', cursive;
   color: #c91507;
