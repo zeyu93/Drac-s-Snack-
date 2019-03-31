@@ -30,6 +30,7 @@
 
   <!--Javascript -->
   <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+  <script type="text/javascript" src="/scripts/atc.js"></script>
 
   <!-- Meta Information -->
   <title>Bela Lugosi's Fed</title>
@@ -50,9 +51,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Ut enim ad minim veniam, quis nostrud hi hello hi
         </p>
-        <form method="" action="post">
-          <button type="submit">Add to Cart</button>
-        </form>
+          <button class = "atc" id ="6" type="submit">Add to Cart</button>
       </figure>
 
       <figure class="col-sm">
@@ -64,9 +63,7 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Ut enim ad minim veniam, quis nostrud
         </p>
-        <form method="" action="post">
-          <button type="submit">Add to Cart</button>
-        </form>
+          <button class = "atc" id ="2" type="submit">Add to Cart</button>
       </figure>
 
       <figure class="col-sm">
@@ -160,6 +157,10 @@
               </p>
             </figure>
         </div>
+
+        <form action="/order" method="GET">
+          <button id= "checkout" type = "submit">Proceed to Order Summary</button>
+        </form>
 
   </section>
   <% include ../views/partials/_footer %>

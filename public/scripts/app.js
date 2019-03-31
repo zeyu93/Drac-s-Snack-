@@ -44,7 +44,7 @@ $(document).ready(function() {
       var newVal = parseInt(oldValue) - 1;
     } else {
       var newVal = 0;
-    }
+    } 
     $button.parent().siblings().find("span")[0].innerText = newVal;
 
     // remove item from shopping cart

@@ -30,10 +30,16 @@
 
      <!-- Application JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/order.js"></script>
+
     <style>
       article form div input {
         text-align: center;
       }
+      .row{
+        display: none;
+      }
+
     </style>
 
   </head>
@@ -70,8 +76,8 @@
           <th width="10%">Plus</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
+      <tbody class="body">
+        <tr id="1" class ="row">
           <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
           <td id="1">Slayer Soup</td>
           <td>9.99</td>
@@ -82,7 +88,7 @@
           </td>
           <td class="plus"><i class="fas fa-plus-circle"></i></td>
         </tr>
-        <tr>
+        <tr id="2"  class ="row">
           <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
           <td id="2">Blood Punch</td>
           <td>9.99</td>
@@ -93,7 +99,7 @@
           </td>
           <td class="plus"><i class="fas fa-plus-circle"></i></td>
         </tr>
-        <tr>
+        <tr id="3"  class ="row">
           <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
           <td id="3">Bloody Cupcakes</td>
           <td>9.99</td>
@@ -104,7 +110,7 @@
           </td>
           <td class="plus"><i class="fas fa-plus-circle"></i></td>
         </tr>
-        <tr>
+        <tr id="4"  class ="row">
           <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
           <td id="4">Drippy Blood Cocktails</td>
           <td>9.99</td>
@@ -115,7 +121,7 @@
           </td>
           <td class="plus"><i class="fas fa-plus-circle"></i></td>
         </tr>
-        <tr>
+        <tr id="5"  class ="row">
           <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
           <td id="5">Bite Shots</td>
           <td>9.99</td>
@@ -125,7 +131,7 @@
             <span>0</span>
           </td>
           <td class="plus"><i class="fas fa-plus-circle"></i></td>
-        </tr>
+        </tr id="6"  class ="row">
         <tr>
           <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
           <td id="6">True Blood Vials</td>
