@@ -30,83 +30,144 @@
 
      <!-- Application JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/order.js"></script>
+
+    <style>
+      article form div input {
+        text-align: center;
+      }
+      .row{
+        display: none;
+      }
+
+    </style>
+
   </head>
 
   <body>
   <% include ../views/partials/_header %>
-    <div>
-      <table class="table table-borderless table-dark">
-        <thead>
-          <tr>
-            <th class="hide">Name</th>
-            <th class="hide">Price</th>
-            <th class="hide" width="10%">Minus</th>
-            <th class="hide" width="10%">Quantity</th>
-            <th class="hide" width="10%">Plus</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td id="1">Slayer Soup</td>
-            <td>9.99</td>
-            <td class="minus"><i class="fas fa-minus-circle"></i></td>
-            <td class="quantity">
-              <span>0</span>
-            </td>
-            <td class="plus"><i class="fas fa-plus-circle"></i></td>
-          </tr>
-          <tr>
-            <td id="2">Blood Punch</td>
-            <td>9.99</td>
-            <td class="minus"><i class="fas fa-minus-circle"></i></td>
-            <td>
-              <span>0</span>
-            </td>
-            <td class="plus"><i class="fas fa-plus-circle"></i></td>
-          </tr>
-          <tr>
-            <td id="3">Bloody Cupcakes</td>
-            <td>9.99</td>
-            <td class="minus"><i class="fas fa-minus-circle"></i></td>
-            <td>
-              <span>0</span>
-            </td>
-            <td class="plus"><i class="fas fa-plus-circle"></i></td>
-          </tr>
-          <tr>
-            <td id="4">Drippy Blood Cocktails</td>
-            <td>9.99</td>
-            <td class="minus"><i class="fas fa-minus-circle"></i></td>
-            <td>
-              <span>0</span>
-            </td>
-            <td class="plus"><i class="fas fa-plus-circle"></i></td>
-          </tr>
-          <tr>
-            <td id="5">Bite Shots</td>
-            <td>9.99</td>
-            <td class="minus"><i class="fas fa-minus-circle"></i></td>
-            <td>
-              <span>0</span>
-            </td>
-            <td class="plus"><i class="fas fa-plus-circle"></i></td>
-          </tr>
-          <tr>
-            <td id="6">True Blood Vials</td>
-            <td>9.99</td>
-            <td class="minus"><i class="fas fa-minus-circle"></i></td>
-            <td>
-              <span>0</span>
-            </td>
-            <td class="plus"><i class="fas fa-plus-circle"></i></td>
-          </tr>
-        </tbody>
-      </table>
+  
+    <table class="table table-borderless table-dark">
+      <thead>
+        <tr>
+          <!-- <th>Picture</th> -->
+          <th>Name</th>
+          <th>Price</th>
+          <th width="10%">Minus</th>
+          <th width="10%">Quantity</th>
+          <th width="10%">Plus</th>
+        </tr>
+      </thead>
+      <tbody class="body">
+        <tr id="1" class ="row">
+          <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
+          <td id="1">Slayer Soup</td>
+          <td>79.99</td>
+          <td class="minus"><i class="fas fa-minus-circle"></i></td>
+          <td class="quantity">
+            <span>0</span>
+            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
+          </td>
+          <td class="plus"><i class="fas fa-plus-circle"></i></td>
+        </tr>
+        <tr id="2"  class ="row">
+          <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
+          <td id="2">Blood Punch</td>
+          <td>79.99</td>
+          <td class="minus"><i class="fas fa-minus-circle"></i></td>
+          <td>
+            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
+            <span>0</span>
+          </td>
+          <td class="plus"><i class="fas fa-plus-circle"></i></td>
+        </tr>
+        <tr id="3"  class ="row">
+          <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
+          <td id="3">Bloody Cupcakes</td>
+          <td>49.99</td>
+          <td class="minus"><i class="fas fa-minus-circle"></i></td>
+          <td>
+            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
+            <span>0</span>
+          </td>
+          <td class="plus"><i class="fas fa-plus-circle"></i></td>
+        </tr>
+        <tr id="4"  class ="row">
+          <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
+          <td id="4">Drippy Blood Cocktails</td>
+          <td>89.99</td>
+          <td class="minus"><i class="fas fa-minus-circle"></i></td>
+          <td>
+            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
+            <span>0</span>
+          </td>
+          <td class="plus"><i class="fas fa-plus-circle"></i></td>
+        </tr>
+        <tr id="5"  class ="row">
+          <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
+          <td id="5">Bite Shots</td>
+          <td>159.99</td>
+          <td class="minus"><i class="fas fa-minus-circle"></i></td>
+          <td>
+            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
+            <span>0</span>
+          </td>
+          <td class="plus"><i class="fas fa-plus-circle"></i></td>
+        </tr >
+        <tr id="6"  class ="row">
+          <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
+          <td id="6">True Blood Vials</td>
+          <td>289.99</td>
+          <td class="minus"><i class="fas fa-minus-circle"></i></td>
+          <td>
+            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
+            <span>0</span>
+          </td>
+          <td class="plus"><i class="fas fa-plus-circle"></i></td>
+        </tr>
+        <tr id="7"  class ="row">
+          <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
+          <td id="7">Fresh Bloody Hearts</td>
+          <td>8599.99</td>
+          <td class="minus"><i class="fas fa-minus-circle"></i></td>
+          <td>
+            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
+            <span>0</span>
+          </td>
+          <td class="plus"><i class="fas fa-plus-circle"></i></td>
+        </tr>
+      
+        <tr id="8"  class ="row">
+          <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
+          <td id="8">Flesh Rosebuds </td>
+          <td>269.99</td>
+          <td class="minus"><i class="fas fa-minus-circle"></i></td>
+          <td>
+            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
+            <span>0</span>
+          </td>
+          <td class="plus"><i class="fas fa-plus-circle"></i></td>
+        </tr>
+        <tr id="9"  class ="row">
+          <!-- <td><img height="10%" width="10%" max-width="596px" max-height="640px" src="/images/slayersoup.jpg"/></td> -->
+          <td id="9">Cheek Shanks with Blood Reduction</td>
+          <td>459.99</td>
+          <td class="minus"><i class="fas fa-minus-circle"></i></td>
+          <td>
+            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
+            <span>0</span>
+          </td>
+          <td class="plus"><i class="fas fa-plus-circle"></i></td>
+        </tr>
+        
+      </tbody>
+    </table>
 
-      <form action="/api/users/order" method="POST">
-        <button type="submit" id="checkout">Checkout</button>
-      </form>
-    </div>
+    <form action="/api/users/order" method="POST">
+
+       <button type="submit" id="checkout">Checkout</button>
+    </form>
+
     <% include ../views/partials/_footer %>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
