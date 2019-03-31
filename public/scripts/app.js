@@ -10,6 +10,8 @@ $(document).ready(function() {
   //     $("<div>").text(item).appendTo($("body"));
   //   }
   // });
+  $(".hide").hide();
+
 
   $(".fas.fa-plus-circle").on("click", function() {
     // increments quantity of item
