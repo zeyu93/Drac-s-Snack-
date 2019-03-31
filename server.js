@@ -111,7 +111,7 @@ function send_sms(params, duration){
   client.messages
   .create({
     body: `Your order will be sent in ${duration} minutes! Sit tight creature of eternal darkness.`,
-   //  Esther's number
+   //  Esther's number. We can't make this work with a user phone number in the form because Twilio trial accounts only accept verified numbers
      from: '+14388069885',
      to: '+15146220593'
     // Zeyu's number
