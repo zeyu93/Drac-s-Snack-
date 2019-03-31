@@ -30,109 +30,83 @@
 
      <!-- Application JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
-    <style>
-      article form div input {
-        text-align: center;
-      }
-    </style>
-
   </head>
 
   <body>
   <% include ../views/partials/_header %>
-    <!-- <article>
-      <form method="post" action="/order">
-        <div>
-          <label for="name">French Hens</label>
-          <input type="text" name="french-hens" data-animal-type="French Hens"
-           maxlength="3" size="2" value="0">
-        </div>
-        <div>
-          <label for="name">Turtle Doves</label>
-          <input type="text" name="turtle-doves" data-animal-type="Turtle Doves" maxlength="3" size="2" value="0">
-        </div>
-        <div>
-          <label for="name">Partridges</label>
-          <input type="text" name="partridge" data-animal-type="Patridges" maxlength="3" size="2" value="0">
-        </div>
+    <div>
+      <table class="table table-borderless table-dark">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th width="10%">Minus</th>
+            <th width="10%">Quantity</th>
+            <th width="10%">Plus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="1">Slayer Soup</td>
+            <td>9.99</td>
+            <td class="minus"><i class="fas fa-minus-circle"></i></td>
+            <td class="quantity">
+              <span>0</span>
+            </td>
+            <td class="plus"><i class="fas fa-plus-circle"></i></td>
+          </tr>
+          <tr>
+            <td id="2">Blood Punch</td>
+            <td>9.99</td>
+            <td class="minus"><i class="fas fa-minus-circle"></i></td>
+            <td>
+              <span>0</span>
+            </td>
+            <td class="plus"><i class="fas fa-plus-circle"></i></td>
+          </tr>
+          <tr>
+            <td id="3">Bloody Cupcakes</td>
+            <td>9.99</td>
+            <td class="minus"><i class="fas fa-minus-circle"></i></td>
+            <td>
+              <span>0</span>
+            </td>
+            <td class="plus"><i class="fas fa-plus-circle"></i></td>
+          </tr>
+          <tr>
+            <td id="4">Drippy Blood Cocktails</td>
+            <td>9.99</td>
+            <td class="minus"><i class="fas fa-minus-circle"></i></td>
+            <td>
+              <span>0</span>
+            </td>
+            <td class="plus"><i class="fas fa-plus-circle"></i></td>
+          </tr>
+          <tr>
+            <td id="5">Bite Shots</td>
+            <td>9.99</td>
+            <td class="minus"><i class="fas fa-minus-circle"></i></td>
+            <td>
+              <span>0</span>
+            </td>
+            <td class="plus"><i class="fas fa-plus-circle"></i></td>
+          </tr>
+          <tr>
+            <td id="6">True Blood Vials</td>
+            <td>9.99</td>
+            <td class="minus"><i class="fas fa-minus-circle"></i></td>
+            <td>
+              <span>0</span>
+            </td>
+            <td class="plus"><i class="fas fa-plus-circle"></i></td>
+          </tr>
+        </tbody>
+      </table>
 
-        <input type="submit" value="Checkout" id="submit">
+      <form action="/api/users/order" method="POST">
+        <button type="submit" id="checkout">Checkout</button>
       </form>
-    </article> -->
-    <table class="table-sm table-borderless table-dark">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Minus</th>
-          <th>Plus</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td id="1">Slayer Soup</td>
-          <td>9.99</td>
-          <td class="quantity">
-            <span>0</span>
-            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
-          </td>
-          <td class="minus"><i class="fas fa-minus-circle"></i></td>
-          <td class="plus"><i class="fas fa-plus-circle"></i></td>
-        </tr><tr>
-          <td id="2">Blood Punch</td>
-          <td>9.99</td>
-          <td>
-            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
-            <span>0</span>
-          </td>
-          <td class="minus"><i class="fas fa-minus-circle"></i></td>
-          <td class="plus"><i class="fas fa-plus-circle"></i></td>
-        </tr><tr>
-          <td id="3">Bloody Cupcakes</td>
-          <td>9.99</td>
-          <td>
-            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
-            <span>0</span>
-          </td>
-          <td class="minus"><i class="fas fa-minus-circle"></i></td>
-          <td class="plus"><i class="fas fa-plus-circle"></i></td>
-        </tr><tr>
-          <td id="4">Drippy Blood Cocktails</td>
-          <td>9.99</td>
-          <td>
-            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
-            <span>0</span>
-          </td>
-          <td class="minus"><i class="fas fa-minus-circle"></i></td>
-          <td class="plus"><i class="fas fa-plus-circle"></i></td>
-        </tr><tr>
-          <td id="5">Bite Shots</td>
-          <td>9.99</td>
-          <td>
-            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
-            <span>0</span>
-          </td>
-          <td class="minus"><i class="fas fa-minus-circle"></i></td>
-          <td class="plus"><i class="fas fa-plus-circle"></i></td>
-        </tr><tr>
-          <td id="6">True Blood Vials</td>
-          <td>9.99</td>
-          <td>
-            <!-- <input type="text" name="quantity" maxlength="3" size="2" value ="0"> -->
-            <span>0</span>
-          </td>
-          <td class="minus"><i class="fas fa-minus-circle"></i></td>
-          <td class="plus"><i class="fas fa-plus-circle"></i></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <form action="/api/users/order" method="POST">
-
-       <button type="submit" id="checkout">Checkout</button>
-    </form>
-
+    </div>
     <% include ../views/partials/_footer %>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

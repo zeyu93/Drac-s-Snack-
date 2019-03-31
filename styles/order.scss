@@ -1,22 +1,20 @@
-
-article {
-    padding-bottom: 100px;
-}
-
-article .quantity {
-    float: left;
-}
-
-article .menu-item {
-    float: left;
-}
-
-article img {
-    float: left;
-}
-
 .table-dark {
-    color: #ffffff;
-    background-color: rgba(0,0,0,0.6);
+  color: #ffffff;
+  background-color: rgba(0,0,0,0.6);
+  margin-left:auto;
+  margin-right:auto;
+  max-width: 70vw;
 }
 
+<<<<<<< HEAD
+=======
+
+body {
+  margin-top: 10%;
+  background: url('/images/bloody-background.jpg')no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+>>>>>>> 9e72552228ec373e13a62e45afd20e66369d5e5d

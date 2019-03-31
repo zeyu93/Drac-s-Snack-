@@ -1,0 +1,32 @@
+body {
+  margin-top: 10%;
+  background: url('/images/castlevania.jpeg')no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.message {
+  font-size: 1.25rem;
+  position: relative;
+  left: 7.5%;
+  padding: 1rem;
+  width: 25%;
+  -webkit-animation: fadein 3s;
+}
+
+.message h2 {
+  font-size: 5rem;
+}
+
+footer {
+margin-top: 2.5rem;
+  -webkit-animation-delay: 2s;
+  -webkit-animation: fadein 3s;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
