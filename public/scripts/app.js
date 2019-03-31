@@ -1,6 +1,7 @@
 $(document).ready(function() {
-
-  let shoppingCart = {};
+var cart = localStorage.getItem('cart');
+shoppingCart = JSON.parse(cart);
+console.log(cart);
 
   // $.ajax({
   //   method: "GET",
