@@ -26,6 +26,9 @@ $(document).ready(function() {
           <td>${cart[item].name}</td>
           <td>${cart[item].item_quantity}</td>
           <td>$${cart[item].price * cart[item].item_quantity}</td>
+          <td><form>
+                <button type="submit">Delete</button>
+              </form>
         </tr>`);
       total += (cart[item].price * cart[item].item_quantity);
     }
