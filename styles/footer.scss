@@ -1,44 +1,72 @@
-.pt-4 {
-    padding-top: 1.5rem !important;
-    margin-left: 20%;
-    margin-top:10%;
+footer {
+    margin-top: 162px;
+    padding-top: 17px;
+    padding-bottom: 0;
+    background-color: black;
 }
 
 footer h2 {
-    font-family: 'Pirata One', cursive !important;
+    font-family: 'Pirata One', cursive;
     color: white;
 }
 
-.mb-md-0, .my-md-0 {
-    margin-bottom: 0 !important;
-    background-color: black;
-}
-
-.mt-md-0, .my-md-0 {
-    margin-top: 0 !important;
-    background-color: black;
-}
-
-.about {
-    width: 80%;
-    margin: 0 auto;
+#contacts {
     display: flex;
-    flex-flow: row;
-    flex: 1 1 0 ;
+    flex-direction: row;
 }
 
-.textbox {
-    line-height: 0.5;
-    flex-basis: 100%;
-    max-width: calc(100% / 3);
-    margin: -5px 2% 10px 2%;
-    text-align: justify;
-    text-justify: inter-word;
-    color: white;
+.wrapper {
+	max-width: 1150px;
+    margin: 0 auto;
+}
+
+.contact-section {
+	display: flex;
+	justify-content: center;
+    text-align: center;
+    margin-top: -109px;
+}
+
+.contact-information {
+    width: 55%;
+    padding-top: 70px;
+    margin-top: -106px;
+}
+
+.social-media-content {
+    width: 50%;
+    padding: 110px 0;
+}
+
+.contact-us-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 44px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 9px;
+    padding-left: 65px;
+}
+
+.contact-address,
+.contact-phone,
+.contact-email {
+    display: flex;
+    padding-top: 25px;
+    padding-left: 15px;
 }
 
 footer .fa {
     padding: 0 3px 0 3px;
+}
+
+.social-media-icons {
+    display: flex;
+    flex-direction: column;
 }
 
 footer .icons {

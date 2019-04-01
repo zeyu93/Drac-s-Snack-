@@ -30,7 +30,8 @@ $(document).ready(function() {
       total += (cart[item].price * cart[item].item_quantity);
     }
     total = Math.round(total*100)/100
-    $("#total").text(`$${total}`);
+    totalRounded = total.toFixed(2);
+    $("#total").text(`$${totalRounded}`);
 
   }
 
