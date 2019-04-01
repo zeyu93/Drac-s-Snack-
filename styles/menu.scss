@@ -2,6 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
+    padding: 4%;
  }
 
 figure {
@@ -9,18 +11,21 @@ figure {
     display: inline-block;
 }
 
-h2 {
+.menus h2 {
   color: #c91507;
+  margin-top: 3%;
 }
 
-p {
-  color: #fbd8c3;
+.menus p {
+  color: white;
+  font-family: 'Oswald', sans-serif;
 }
 
 .menus {
     height: 23vw;
     width: 23vw;
-
+    z-index: 1;
+    padding-right: 2%;
 }
 
 .menus img {
@@ -31,4 +36,11 @@ p {
 
 .image {
     opacity: 0.8
+}
+
+button {
+    background-color: #8b8d6d;
+    color: black;
+    border-color: #4e4747;
+    box-shadow: 2px 2px #696969;
 }

@@ -1,7 +1,6 @@
 body {
   margin-top: 10%;
-  background-color: black;
-  // background: url('/images/bloody-background.jpg')no-repeat center center fixed;
+  background: url('/images/coffins.jpg')no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,11 +8,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.container {
-  background-color: white;
+.transparent-box {
+  width: 80%;
+  max-height: 100%;
+  margin: auto;
+  background-color: black;
 }
 
 h2 {
-  font-family: 'Jolly Lodger', cursive;
+  font-family: 'Pirata One', cursive;
 }
 
