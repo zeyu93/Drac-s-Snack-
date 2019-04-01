@@ -13,3 +13,20 @@
   margin-right:auto;
   max-width: 70vw;
 }
+
+.btn-dark {
+  background-color: #8b8d6d;
+  color: black;
+  border-color: #4e4747;
+  box-shadow: 2px 2px #696969;
+}
+
+.btn-dark:hover {
+  color: #fff;
+  background-color: #23272b;
+  border-color: #1d2124;
+}
+
+.btn-dark:focus, .btn-dark.focus {
+  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
