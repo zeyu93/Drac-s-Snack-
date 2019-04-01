@@ -26,10 +26,6 @@ $(document).ready(function() {
           <td>${cart[item].name}</td>
           <td>${cart[item].item_quantity}</td>
           <td>$${cart[item].price * cart[item].item_quantity}</td>
-          <td><form>
-                <button class="delete" type="submit">Delete</button>
-              </form>
-          </td>
         </tr>`);
       total += (cart[item].price * cart[item].item_quantity);
     }
@@ -39,10 +35,5 @@ $(document).ready(function() {
   }
 
   loopThroughCart();
-
- $(".delete").on("click", function() {
-    event.preventDefault();
-    localStorage.removeItem('');
-  });
 
 });
