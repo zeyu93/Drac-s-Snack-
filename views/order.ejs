@@ -34,7 +34,7 @@
 
   <body>
   <% include ../views/partials/_header %>
-    <div>
+    <div class="order">
       <table class="table table-borderless table-dark">
         <thead>
           <tr>
@@ -104,7 +104,7 @@
       </table>
 
       <form action="/api/users/order" method="POST">
-        <button type="submit" id="checkout">Checkout</button>
+        <button class="btn btn-dark" type="submit" id="checkout">Checkout</button>
       </form>
     </div>
     <% include ../views/partials/_footer %>
