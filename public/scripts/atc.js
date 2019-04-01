@@ -10,6 +10,7 @@ $(document).ready(function() {
     var itemid = $(this).attr('id')
     $(this).attr("disabled", "disabled");
     $(this).html('Added to Cart')
+    $(this).css('background-color','red');
     clicked.push(itemid)
     console.log('this is the items', clicked)
 
