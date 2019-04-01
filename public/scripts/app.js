@@ -15,7 +15,7 @@ $(document).ready(function() {
     }
   }
 
-  $(".hide").hide();
+  // $(".hide").hide();
 
 
   $(".fas.fa-plus-circle").on("click", function() {
