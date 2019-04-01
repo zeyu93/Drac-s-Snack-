@@ -1,20 +1,27 @@
 //allows local storage to store item added to cart
 
 $(document).ready(function() {
-
-  var clicked = []
+  var shoppingCart = {}
 
   $(".atc").on("click", function() {
 
+    var itemid = $(this).attr('id');
+    var item = $(this);
+
+    console.log(item.siblings());
+
     //make atc button disabled
-    var itemid = $(this).attr('id')
-    $(this).attr("disabled", "disabled");
+
+    $(this).attr("disabled");
     $(this).html('Added to Cart')
     $(this).css('background-color','red');
-    clicked.push(itemid)
-    console.log('this is the items', clicked)
+    shoppingCart[itemid] = {
+      item_id: itemid,
+      name: item.siblings()[1].innerText,
+      item_quantity: 1,
+      price: item.siblings()[3].innerText};
 
-    localStorage.setItem('items', JSON.stringify(clicked));
+    localStorage.setItem('cart', JSON.stringify(shoppingCart));
     console.log(localStorage);
   })
 
