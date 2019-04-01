@@ -1,20 +1,22 @@
 .pt-4 {
     padding-top: 1.5rem !important;
-    margin-left: 15%;
+    margin-left: 20%;
+    margin-top:10%;
 }
 
-.grid-padding {
-    padding: 0px;
-    margin-right: 2.75%;
+footer h2 {
+    font-family: 'Pirata One', cursive !important;
+    color: white;
 }
 
-footer {
+.mb-md-0, .my-md-0 {
+    margin-bottom: 0 !important;
+    background-color: black;
+}
 
-    /*width: 100%;
-    margin: 5% 0% 0% 0%;
-    padding-top: 12%;
-    padding-bottom: 1%;
-    background-color: black;*/
+.mt-md-0, .my-md-0 {
+    margin-top: 0 !important;
+    background-color: black;
 }
 
 .about {
