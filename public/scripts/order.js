@@ -10,7 +10,6 @@
         $(`#${id}`).css("display", "table-row")
       }
     }
-  
     loopThroughCart()
   });
   
