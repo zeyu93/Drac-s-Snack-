@@ -13,14 +13,6 @@ $(document).ready(function() {
     }
   }
 
-  // $.ajax({
-  //   method: "GET",
-  //   url: "/api/users/checkout"
-  // }).done((items) => {
-  //   for(item of items) {
-  //     $("<div>").text(item).appendTo($("body"));
-  //   }
-  // });
   $(".hide").hide();
 
 
@@ -69,10 +61,7 @@ $(document).ready(function() {
         shoppingCart[item].item_quantity = newVal;
       }
     }
-
-
   });
-
 
   $("#checkout").on("click", function() {
     localStorage.setItem('cart', JSON.stringify(shoppingCart));
