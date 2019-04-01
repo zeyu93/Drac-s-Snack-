@@ -1,13 +1,33 @@
+body {
+  margin-top: 5%;
+  background: url('/images/bloody-background.jpg')no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
-.carousel-inner > .carousel-item > img {
-                padding-top: 5%;
-                max-height: 70vh;
-                max-width: 50vw;
-                padding-left: 20%;
+.carousel {
+  margin: 0 auto;
+  max-height: 50vh;
+  max-width: 60vw;
+  overflow: hidden;
+
+  .carousel-item img {
+    height: auto;
+    width: auto;
+  }
 }
 
 h1.welcome {
   font-family: 'Jolly Lodger', cursive;
   color: #c91507;
-  font-size: 500%
+  font-size: 500%;
+  margin-left: 7.5rem;
+  margin-top: 7.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.carousel-caption {
+  background-color: rgba(0,0,0,0.5);
 }

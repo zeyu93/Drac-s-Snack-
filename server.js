@@ -83,6 +83,9 @@ app.get("/checkout", (req, res) => {
   res.render("checkout");
 });
 
+app.post("/edit", (req, res) => {
+  res.redirect("/order");
+});
 
 app.get("/confirmed", (req, res) => {
   res.render("confirmed");

@@ -34,15 +34,15 @@
 
   <body>
   <% include ../views/partials/_header %>
-    <div>
+    <div class="order">
       <table class="table table-borderless table-dark">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th width="10%">Minus</th>
-            <th width="10%">Quantity</th>
-            <th width="10%">Plus</th>
+            <th class="hide">Name</th>
+            <th class="hide">Price</th>
+            <th class="hide" width="10%">Minus</th>
+            <th class="hide" width="10%">Quantity</th>
+            <th class="hide" width="10%">Plus</th>
           </tr>
         </thead>
         <tbody>
@@ -104,7 +104,7 @@
       </table>
 
       <form action="/api/users/order" method="POST">
-        <button type="submit" id="checkout">Checkout</button>
+        <button class="btn btn-dark" type="submit" id="checkout">Checkout</button>
       </form>
     </div>
     <% include ../views/partials/_footer %>
