@@ -1,14 +1,16 @@
 $(document).ready(function() {
 
-  let shoppingCart = {};
+  let shoppingCart = JSON.parse(localStorage.getItem('cart'));
 
   if (localStorage.getItem('cart')) {
-    shoppingCart = JSON.parse(localStorage.getItem('cart'));
 
     for (var item in shoppingCart) {
-      if (shoppingCart[item].name === document.getElementById(item).innerText) {
+      if (item == $(`#${item}`)[0].getAttribute("id")) {
         let test = document.getElementById(item);
-        $(test).siblings().find("span").text(shoppingCart[item].item_quantity);
+        console.log(test);
+        $(test).children().find("span").text(shoppingCart[item].item_quantity);
+      } else {
+        // console.log("Failed!")
       }
     }
   }
@@ -24,18 +26,21 @@ $(document).ready(function() {
     $button.parent().siblings().find("span")[0].innerText = newVal;
 
     // adds item to shopping cart
-    var pathToID = $button.parent().siblings()[0].getAttribute("id");
+    // var pathToID = $button.parent().siblings()[0].getAttribute("id");
     var pathToName = $button.parent().siblings()[0].innerText;
     var pathToPrice = $button.parent().siblings()[1].innerText;
     let item = pathToID;
 
-    shoppingCart[item] = ({
-      item_id: pathToID,
-      name: pathToName,
-      item_quantity: newVal,
-      price: pathToPrice
-    })
+    // shoppingCart[item] = ({
+    //   item_id: pathToID,
+    //   name: pathToName,
+    //   item_quantity: newVal,
+    //   price: pathToPrice
+    // })
 
+    console.log(shoppingCart);
+    var pathToID = $button.parent().parent()[0].getAttribute("id");
+    shoppingCart[pathToID].item_quantity += 1;
   });
 
   $(".fas.fa-minus-circle").on("click", function() {
@@ -51,7 +56,7 @@ $(document).ready(function() {
     $button.parent().siblings().find("span")[0].innerText = newVal;
 
     // remove item from shopping cart
-    var pathToID = $button.parent().siblings()[0].getAttribute("id");
+    var pathToID = $button.parent().parent()[0].getAttribute("id");
     let item = pathToID;
 
     if (shoppingCart[item] !== undefined ) {
