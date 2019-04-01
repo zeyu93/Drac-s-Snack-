@@ -8,13 +8,9 @@ $(document).ready(function() {
     for (var item in shoppingCart) {
       if (shoppingCart[item].name === document.getElementById(item).innerText) {
         let test = document.getElementById(item);
-        console.log($(test).siblings().find("span").text());
-        console.log(shoppingCart[item].item_quantity);
         $(test).siblings().find("span").text(shoppingCart[item].item_quantity);
       }
     }
-
-    console.log(shoppingCart);
   }
 
   // $.ajax({
@@ -81,4 +77,5 @@ $(document).ready(function() {
   $("#checkout").on("click", function() {
     localStorage.setItem('cart', JSON.stringify(shoppingCart));
   })
+
 });
