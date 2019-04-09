@@ -1,29 +1,51 @@
-# Node Skeleton
+#FoodFast
 
-## Project Setup
+##About the Project
+Full stack web application built with Node, Express, AJAX, Twilio API, jQuery, HTML5, CSS3 and PosgreSQL.
 
-1. Create your own empty repo on GitHub
-2. Clone this repository (do not fork)
-  - Suggestion: When cloning, specify a different folder name that is relevant to your project
-3. Remove the git remote: `git remote rm origin`
-4. Add a remote for your origin: `git remote add origin <your github repo URL>`
-5. Push to the new origin: `git push -u origin master`
-6. Verify that the skeleton code now shows up in your repo on GitHub
+##Problem Statement
+An application built to simplify online food ordering for pickup.
 
-## Getting Started
+##Expected Usage
+Desired users are restaurant owners and customers:
 
-1. Create the `.env` by using `.env.example` as a reference: `cp .env.example .env`
-2. Update the .env file with your correct local information
-3. Install dependencies: `npm i`
-4. Fix to binaries for sass: `npm rebuild node-sass`
-5. Run migrations: `npm run knex migrate:latest`
-  - Check the migrations folder to see what gets created in the DB
-6. Run the seed: `npm run knex seed:run`
-  - Check the seeds file to see what gets seeded in the DB
-7. Run the server: `npm run local`
-8. Visit `http://localhost:8080/`
+Users can go on the web application and place an order 
 
-## Dependencies
+Restaurant owner then will be notified on the order and over text (using Twilio API)
+they specify how long the order will take to prepare.
+This triggers a notification to the customer with estimated preparation time via SMS.
 
-- Node 5.10.x or above
-- NPM 3.8.x or above
+##Getting Started
+Install all dependencies (using the npm install command).
+
+Setup the database:
+
+Run knex migrate:latest in your terminal.
+Optional: Set up dummy-data by running knex seed:run in your terminal.
+To use the voice/sms features:
+
+Install the google chrome extension, Forward : https://chrome.google.com/webstore/detail/forward-link-to-localhost/ghnicdmecgkdbledgnmbbnddfnjjgegp?hl=en
+Create a tunnel to your localhost and open it.
+Go to Twilio and sign up for a new account.
+Get a Twilio phone number.
+Create a new Twiml App in the console, and set the request URL to your tunneled address.
+Create a .env file and set the variables with your Twiml info. TWILIO_ACCOUNT_SID=XXXXXXXXX TWILIO_AUTH_TOKEN=XXXXXXXX TWILIO_NUMBER=+1XXXXXXXXXX TEST_NUMBER=+1XXXXXXXXXX
+Run the development web server using the 'npm start' command.
+
+As a restaurant owner: Visit the page: http://localhost:3000/admin in your browser.
+
+As a user: Visit the page:  http://localhost:3000 in your browser.
+
+###Dependencies
+bcrypt 1.0.2 or above
+body-parser 1.17.2 or above
+cookie-session 2.0.0-beta.2
+cookie-parser 1.4.3 or above
+dovenv 4.0.0 or above
+ejs 2.5.6 or above
+express 4.15.3 or above
+express-basic-auth 1.1.1 orabove
+node 5.10.x or above
+pg 7.0.2 or above
+request 2.81.0 or above
+twilio 3.5.0 or above
