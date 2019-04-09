@@ -32,9 +32,9 @@ Create a new Twiml App in the console, and set the request URL to your tunneled 
 Create a .env file and set the variables with your Twiml info. TWILIO_ACCOUNT_SID=XXXXXXXXX TWILIO_AUTH_TOKEN=XXXXXXXX TWILIO_NUMBER=+1XXXXXXXXXX TEST_NUMBER=+1XXXXXXXXXX
 Run the development web server using the 'npm start' command.
 
-As a restaurant owner: Visit the page: http://localhost:3000/admin in your browser.
+As a restaurant owner: Visit the page: http://localhost:8080/admin in your browser.
 
-As a user: Visit the page:  http://localhost:3000 in your browser.
+As a user: Visit the page:  http://localhost:8080 in your browser.
 
 ###Dependencies
 bcrypt 1.0.2 or above
