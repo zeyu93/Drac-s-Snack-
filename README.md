@@ -1,14 +1,15 @@
-#Drax's Snacks
-#Drax's Snacks
+# Drax's Snacks
 
-##About the Project
+
+## About the Project
 Full stack web application built with Node, Express, AJAX, Twilio API, jQuery, HTML5, CSS3 and PosgreSQL.
 
 !["Order Page"](/public/images/order-page.png?raw=true "HomePage")
-##Problem Statement
+
+## Problem Statement
 An application built to simplify online food ordering for pickup.
 
-##Expected Usage
+## Expected Usage
 Desired users are restaurant owners and customers:
 
 Users can go on the web application and place an order 
@@ -17,7 +18,7 @@ Restaurant owner then will be notified on the order and over text (using Twilio 
 they specify how long the order will take to prepare.
 This triggers a notification to the customer with estimated preparation time via SMS.
 
-##Getting Started
+## Getting Started
 Install all dependencies (using the npm install command).
 
 Setup the database:
@@ -38,7 +39,7 @@ As a restaurant owner: Visit the page: http://localhost:8080/admin in your brows
 
 As a user: Visit the page:  http://localhost:8080 in your browser.
 
-###Dependencies
+### Dependencies
 bcrypt 1.0.2 or above
 body-parser 1.17.2 or above
 cookie-session 2.0.0-beta.2
