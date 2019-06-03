@@ -4,6 +4,7 @@
 ##About the Project
 Full stack web application built with Node, Express, AJAX, Twilio API, jQuery, HTML5, CSS3 and PosgreSQL.
 
+!["Order Page"](/public/images/order-page.png?raw=true "HomePage")
 ##Problem Statement
 An application built to simplify online food ordering for pickup.
 
